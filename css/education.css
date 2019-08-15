@@ -234,6 +234,7 @@ img {
   cursor: zoom-in;
 }
 
+img:focus,
 img.blowup {
   position: fixed;
   max-height: 95%;

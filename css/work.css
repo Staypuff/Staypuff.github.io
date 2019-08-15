@@ -282,7 +282,7 @@ figcaption a {
   width: 90%;
   font-size: 1.6em;
   line-height: 1.5;
-  text-align: justify;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;

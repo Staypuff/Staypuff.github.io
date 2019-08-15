@@ -1,0 +1,674 @@
+body {
+  font-family: georgia, arial, serif;
+  font-size: 3vw;
+  box-sizing: border-box;
+  background-color: rgb(12, 46, 63);
+  color: rgb(246, 246, 246);
+}
+
+.navmenu {
+  z-index: 1000;
+}
+
+.bars {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1002;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  border: none;
+  border-radius: 10%;
+  text-decoration: none;
+  background-color: rgba(246, 246, 246, .7);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bar1, .bar2, .bar3 {
+  width: 36px;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bars {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.change .bars * {
+  background-color: rgb(246, 246, 246);
+}
+
+.change .bar1 {
+  -webkit-transform: translate(9px, 8px) rotate(-120deg);
+  -ms-transform: translate(9px, 8px) rotate(-120deg);
+  transform: translate(9px, 8px) rotate(-120deg);
+  border-radius: 5px;
+}
+
+.change .bar2 {
+  -webkit-transform: translate(-9px, -1px) rotate(-60deg);
+  -ms-transform: translate(-9px, -1px) rotate(-60deg);
+  transform: translate(-9px, -1px) rotate(-60deg);
+  border-radius: 5px;
+}
+
+.change .bar3 {
+  -webkit-transform: translate(0, 4px);
+  -ms-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+  border-radius: 5px;
+}
+
+.navlist {
+  display: inline-block;
+  position: fixed;
+  overflow: visible;
+  z-index: 1001;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  background: url(../imgs/liane-metzler-Y1ByvAGQ5iE-unsplash.jpg) rgb(12, 46, 63);
+  background-position: center;
+  background-size: cover;
+}
+
+.change .navlist {
+  height: auto;
+  padding-bottom: 20vh;
+  padding-top: 40vh;
+}
+
+.navlink {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 75%;
+  font-size: 3em;
+  margin: .25em auto;
+  border: solid 1px rgb(150, 150, 150);
+  border-radius: .5em;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, .7);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  color: rgb(246, 246, 246);
+}
+
+.navlink:active,
+.navlink:focus,
+.navlink:hover {
+  background-color: rgba(246, 246, 246, .7);
+  color: rgb(0, 0, 0);
+  text-shadow: none;
+}
+
+.bars:active,
+.bars:focus,
+.bars:hover {
+  opacity: .5;
+}
+
+header {
+  position: relative;
+  background: url(../imgs/liane-metzler-Y1ByvAGQ5iE-unsplash.jpg) rgb(12, 46, 63);
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid;
+  border-color: rgb(171, 153, 121);
+  height: 15vh;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(-20%, 20%);
+  -ms-transform: translate(-20%, 20%);
+  transform: translate(-20%, 20%);
+  font-size: 3em;
+  font-weight: normal;
+  color: rgb(171, 153, 121);
+}
+
+header h2 {
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  margin-left: 3rem;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: normal;
+  color: rgb(246, 246, 246);
+  text-shadow: 1px 1px 3px rgb(30, 38, 48);
+}
+
+section {
+  padding: 2em 0;
+}
+
+#online {
+  background-color: rgb(91, 102, 113);
+}
+
+section:last-of-type {
+  padding-bottom: 0;
+}
+
+h3 {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  padding: .5em 0;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: rgb(171, 153, 121);
+  font-size: 2em;
+  font-weight: normal;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-align: center;
+}
+
+#online h3 {
+  border-color: rgb(196, 194, 192);
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  color: rgb(171, 153, 121);
+}
+
+#online h4 {
+  color: rgb(245, 245, 245);
+}
+
+h5 {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  font-size: 1.6em;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  color: rgb(245, 245, 245);
+}
+
+h6 {
+  margin-bottom: .5em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  color: rgb(245, 245, 245);
+}
+
+figure {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  border: solid 1px rgb(171, 153, 121);
+  border-radius: 1em;
+  cursor: zoom-in;
+}
+
+img.blowup {
+  position: fixed;
+  max-height: 95%;
+  max-width: 95%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  padding: 100vh 100vw;
+  cursor: zoom-out;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+figcaption p {
+  font-size: 1em;
+}
+
+figcaption a {
+  color: inherit;
+}
+
+#online h4 a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  padding: .3rem .5em;
+  margin-left: 1em;
+  margin-right: 0;
+  text-align: center;
+  border: solid 1px rgb(196, 194, 192);
+  border-radius: 100%;
+  background-color: rgb(0, 89, 179);
+}
+
+#online a:hover,
+#online a:focus {
+  opacity: .7;
+}
+
+.list {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  font-size: 1em;
+  color: rgb(246, 246, 246);
+}
+
+.arrow,
+.subarrow {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  padding: .5em 0;
+  border-radius: .5em;
+  font-size: 1.7em;
+}
+
+.arrow {
+  margin-left: 3rem;
+}
+
+.subarrow {
+  position: absolute;
+  left: -1000%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#college .arrow,
+#college .subarrow {
+  width: 9em;
+  border: solid 1px rgb(91, 102, 113);
+  background-color: rgb(171, 153, 121);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  color: rgb(245, 245, 245);
+}
+
+#online .arrow,
+#online .subarrow {
+  width: 11em;
+  border: solid 1px rgb(171, 153, 121);
+  background-color: rgb(12, 46, 63);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  color: rgb(246, 246, 246);
+}
+
+.expand .subarrow {
+  position: static;
+}
+
+#college .expand.arrow,
+#college .expand.subarrow,
+#online .expand.arrow,
+#online .expand.subarrow {
+  background-color: rgb(246, 246, 246);
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.arrow:hover,
+.arrow:focus,
+.subarrow:hover,
+.subarrow:focus {
+  opacity: .5;
+}
+
+.table-container {
+  position: absolute;
+  left: -1000%;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  width: 90%;
+  border: solid 1px rgb(171, 153, 121);
+  border-radius: .5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-size: 1.6em;
+  color: rgb(246, 246, 246);
+}
+
+#online .table {
+  color: rgb(232, 223, 159);
+}
+
+td {
+  display: block;
+  padding: 1em .5em;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  vertical-align: middle;
+  text-align: center;
+}
+
+td a {
+  color: inherit;
+}
+
+.table td:nth-child(odd) {
+  color: rgb(232, 223, 159);
+  background-color: rgba(62, 134, 193, .2);
+}
+
+#online .table td:nth-child(odd) {
+  color: rgb(245, 245, 245);
+}
+
+.table td:hover,
+.table td:focus {
+  opacity: .7;
+}
+
+.expand .expand.table-container {
+  position: static;
+}
+
+#online .table {
+  border-color: rgb(196, 194, 192);
+}
+
+#online .table td:nth-child(odd) {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+#flight article {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  border-color: rgb(171, 153, 121);
+  margin-bottom: 3px;
+  padding: 1em 0;
+}
+
+#flight article:first-of-type {
+  border-top: none;
+}
+
+footer {
+  display: table;
+  width: 100%;
+  height: 10em;
+  clear: both;
+  border-top: solid 1px rgb(171, 153, 121);
+}
+
+.foot {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 2em;
+  border: none;
+  font-size: 2em;
+  font-weight: normal;
+  color: rgb(12, 46, 63);
+  text-shadow: 1px 1px 1px rgba(246, 246, 246, .5);
+}
+
+@media all and (min-width: 500px) {
+  body {
+    font-size: 1.5vw;
+  }
+
+  .change .navlist {
+    top: 50%;
+    padding-top: 40vh;
+    padding-bottom: 0;
+    height: 60vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .navlink {
+    display: inline-block;
+    width: auto;
+    margin: .5em;
+    vertical-align: center;
+    font-size: 1.9em;
+  }
+
+  header {
+    height: 25vh;
+  }
+
+  .subarrow {
+    position: absolute;
+    left: -1000%;
+    margin-left: 3em;
+  }
+
+  .table td {
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .table tr:first-of-type td:first-child,
+  .table tr:last-of-type td:last-child {
+    border-radius: 0;
+  }
+
+  #college .table td:nth-child(odd),
+  #online .table td:nth-child(odd) {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .table td {
+    width: 50%;
+  }
+
+  #college tr:nth-child(odd) {
+    background-color: rgba(62, 134, 193, .2);
+    color: rgb(232, 223, 159);
+  }
+
+  #online tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .2);
+    color: rgb(245, 245, 245);;
+  }
+
+  #college .table td:nth-child(odd) {
+    border-right: solid 1px rgb(171, 153, 121);
+  }
+
+  #online .table td:nth-child(odd) {
+    border-right: solid 1px rgb(196, 194, 192);
+  }
+
+  .table td:hover,
+  .table td:focus {
+    opacity: 1;
+  }
+
+  .table tr:hover,
+  .table tr:focus {
+    opacity: .7;
+  }
+}
+
+@media all and (min-width: 768px) {
+  header {
+    height: 20vh;
+  }
+
+  article {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    vertical-align: middle;
+  }
+
+  .figure {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  #college figure,
+  #flight figure {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 2em 0;
+  }
+
+  #college h4:first-of-type,
+  #flight h4:first-of-type {
+    padding-top: 2em;
+    margin-top: 0;
+  }
+
+  #online h4 {
+    display: inline-block;
+    margin-left: 2em;
+  }
+
+  #flight h6:last-of-type {
+    padding-bottom: 2em;
+    margin-bottom: 0;
+  }
+
+  #online .arrow {
+    display: inline-block;
+  }
+
+  .subarrow {
+    clear: left;
+  }
+}
+
+@media all and (min-width: 992px) {
+  body {
+    font-size: 1.2vw;
+  }
+
+  header {
+    height: 20vh;
+  }
+
+  .wrapper {
+    display: table;
+  }
+
+  .navmenu {
+    display: table-cell;
+    width: 20%;
+    vertical-align: top;
+    background-color: rgb(81, 116, 136);
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .navlist {
+    display: block;
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sticky.navlist {
+    position: fixed;
+    width: 20%;
+    left: 0;
+    top: 0;
+  }
+
+  .navlink {
+    display: block;
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 3vh 0;
+    font-size: 2.5vw;
+    background: transparent;
+  }
+
+  main {
+    display: table-cell;
+  }
+
+  .arrow,
+  .subarrow {
+    font-size: 1.3em;
+    margin-left: 3rem;
+  }
+
+  .expand li {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .subarrow {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    margin-left: 2em;
+    width: 30%;
+  }
+
+  .table-container {
+    display: table-cell;
+    vertical-align: top;
+    width: 70%;
+  }
+
+  #online .table-container {
+    width: 65%;
+  }
+
+  .table {
+    width: 100%;
+  }
+  .table td {
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  #online a {
+    padding: .2em .5em;
+  }
+}

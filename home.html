@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset-defaults.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+  <nav class="navmenu" id="navmenu">
+    <div onclick="navmenu()" class="bars" id="bars">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div class="navlist" id="navlist">
+      <a class="navlink" href="education.html">Education</a>
+      <a class="navlink" href="work.html">Work</a>
+      <a class="navlink" href="resume-cv.html">Resume / CV</a>
+    </div>
+  </nav>
+  <header class="container" id="header">
+    <h1>Dave Craddock</h1>
+  </header>
+  <footer class="container" id="footer">
+    <h2>Designed by Dave Craddock</h2>
+  </footer>
+  <script>
+    function navmenu() {
+      document.getElementById("navmenu").classList.toggle("change");
+    }
+  </script>
+</body>
+
+</html>

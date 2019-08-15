@@ -1,0 +1,185 @@
+body {
+  font-family: helvetica, verdana, arial;
+  font-size: 3vw;
+  box-sizing: border-box;
+  background: url(../imgs/liane-metzler-Y1ByvAGQ5iE-unsplash.jpg) #90a5a8;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+header {
+  height: 80vh;
+}
+
+h1 {
+  display: inline-block;
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  margin: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-shadow: 1px 1px 3px rgb(245, 245, 245);
+  color: #000;
+}
+
+.bars {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1001;
+  bottom: 0;
+  left: 50%;
+  padding: 15px;
+  border: none;
+  border-radius: 10%;
+  text-decoration: none;
+  background-color: rgba(245, 245, 245, .7);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.change .bars {
+  background-color: rgb(38, 56, 65);
+}
+
+.change .bars * {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.bar1, .bar2, .bar3 {
+  width: 36px;
+  height: 4px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  width: 36px;
+  -webkit-transform: translate(9px, 8px) rotate(-120deg);
+  -ms-transform: translate(9px, 8px) rotate(-120deg);
+  transform: translate(9px, 8px) rotate(-120deg);
+  border-radius: 5px;
+}
+
+.change .bar2 {
+  width: 36px;
+  -webkit-transform: translate(-9px, -1px) rotate(-60deg);
+  -ms-transform: translate(-9px, -1px) rotate(-60deg);
+  transform: translate(-9px, -1px) rotate(-60deg);
+  border-radius: 5px;
+}
+
+.change .bar3 {
+  width: 36px;
+  -webkit-transform: translate(0, 4px);
+  -ms-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+  border-radius: 5px;
+}
+
+.navlist {
+  display: inline-block;
+  position: fixed;
+  overflow: visible;
+  z-index: 1000;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: 0;
+  transition: height .35s;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.change .navlist {
+  height: 50vh;
+  transition: height .35s;
+}
+
+.navlink {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 75%;
+  font-size: 2rem;
+  margin: .25rem auto;
+  border-radius: 10px;
+  padding: .5rem .5rem;
+  background-color: rgba(38, 56, 65, .8);
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.navlink:active,
+.navlink:focus,
+.navlink:hover {
+  background-color: #fff;
+  color: rgb(38, 56, 65);
+  border-radius: 10px;
+  text-shadow: none;
+}
+
+footer {
+  height: 20vh;
+}
+
+h2 {
+  visibility: hidden;
+}
+
+@media all and (min-width: 500px) {
+  .bars {
+    display: none;
+  }
+  .navlist {
+    position: absolute;
+    top: 60%;
+    margin: 0;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  .navlink {
+    display: inline-block;
+    width: initial;
+    margin: auto;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    background-color: transparent;
+  }
+}
+
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .navlist {
+    height: 3rem;
+  }
+  .navlink {
+    display: inline-block;
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .navlist {
+    height: 3.5rem;
+  }
+  .navlink {
+    display: inline-block;
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Education</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reset-defaults.css">
+  <link rel="stylesheet" href="css/resume-cv.css">
+</head>
+<body>
+<header id="header">
+  <h1>DC</h1>
+  <h2>Resume / CV</h2>
+</header>
+<div class="wrapper">
+<nav class="navmenu" id="navmenu">
+  <div onclick="navmenu(this)" class="bars" id="bars">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <div class="navlist" id="navlist">
+    <a class="navlink" href="home.html">Home</a>
+    <a class="navlink" href="education.html">Education</a>
+    <a class="navlink" href="work.html">Work</a>
+  </div>
+</nav>
+<main class="main">
+  <section>
+    <h3>Documents</h3>
+    <a target="_blank" href="docs/resume.pdf">Resume</a>
+    <a target="_blank" href="docs/cv.pdf">CV</a>
+  </section>
+</main>
+</div>
+<footer id="footer">
+  <h3 class="foot">Dave Craddock</h3>
+</footer>
+<script>
+  function navmenu(obj) {
+    if (screen.width < 992 || obj.id == "bars") {
+      document.getElementById("navmenu").classList.toggle("change");
+      document.getElementById("bars").blur();
+    }
+  }
+
+  window.onscroll = function() {stick()};
+
+  // Get the navbar
+  var navbar = document.getElementById("navlist");
+
+  // Get the offset position of the navbar
+  var sticky = navlist.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function stick() {
+    if (window.pageYOffset >= sticky) {
+      navlist.classList.add("sticky");
+    }
+    else {
+      navlist.classList.remove("sticky");
+    }
+  }
+</script>
+</body>
+</html>

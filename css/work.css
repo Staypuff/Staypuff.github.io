@@ -422,4 +422,7 @@ footer {
   figure {
     max-width: 80%;
   }
+  
+  footer {
+    margin-top: 0;
 }

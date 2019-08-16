@@ -186,6 +186,11 @@ section a {
   color: rgb(245, 245, 245);
 }
 
+section a:hover,
+section a:focus {
+  opacity: .5;
+}
+
 footer {
   display: table;
   width: 100%;
